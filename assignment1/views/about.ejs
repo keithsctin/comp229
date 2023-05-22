@@ -1,0 +1,36 @@
+<!-- COMP229-008
+    Assignment 1
+    
+      Author: Sing Cheung Tin
+      Date:   May 20, 2023
+
+    Filename: assignment1.css
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/assignment1.css"/>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <!-- <h1>Welcome to My Portfolio</h1> -->
+    <!-- <h1><%= title %></h1> -->
+    <article>
+    <p>Hello there,</p>
+    <p>My name is Sing Cheung Tin. I'm studying Software Engineering Technician program in Centennial College.
+        The program is very interesting and practical. The main courses include JavaScript, Node JS, C Sharp, and SQL coding.
+    </p>
+    <p>Here are my favourite things:</p>
+    <ul class="favourite">
+        <li>Reading</li>
+        <li>Hiking</li>
+        <li>Swimming</li>
+        <li>Playing badminton</li>
+        <li>Playing table tennis</li>
+        <li>Writing program</li>
+    </ul>
+    </article>
+</body>
+<%- include('partials/footer') %>
+</html>
