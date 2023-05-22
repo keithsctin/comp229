@@ -1,10 +1,8 @@
 /*  COMP229-008
-    Assignment 1
-    
+      Assignment: 1
       Author: Sing Cheung Tin
       Date:   May 20, 2023
-
-    Filename: assignment1.css
+      Filename: assignment1.css
 */
 
  /* apply a natural box layout model to all elements */
@@ -68,7 +66,6 @@ body {
 nav {
   float: left;
   background-color: rgb(52, 53, 51);
-  /* overflow: hidden; */
   width: 100%;
   text-align: left;
   margin-bottom: 50px;
@@ -90,20 +87,14 @@ nav li a {
 }
 
 nav li a.active {
-  /* color: green; */
   background-color: green;
 }
-
-/* article {
-  margin-top: 50px;
-} */
-/*-------------------- Project Styles ------------------*/
 
 section {
   background-color: white;
   margin-top: 0;
   padding-top: 20px;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
 }
 
 section > h1 {
@@ -112,8 +103,10 @@ section > h1 {
   font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
   letter-spacing: 0.1em;
   margin-bottom: 20px;
-  color: rgba(255, 255, 255, 0.6);
-  text-shadow: 2px 2px black;
+  /* color: rgba(255, 255, 255, 0.6); */
+  color: rgba(54, 4, 131, 0.6);
+  /* text-shadow: 2px 2px black; */
+  text-shadow: 2px 2px rgba(128, 128, 128, 0.271);
 }
 
 section > ul {
@@ -128,40 +121,30 @@ section > ul li {
   height: 30px;
 }
 
-div#caption {
-  width: 80%;
-  background-color: rgba(255, 255, 255, 0.3);
-  margin: 20px auto;
-  text-align: center;
-  font-size: 1.3em;
-  line-height: 1.5em;  
-}
-
-button#updatebutton {
- display: block;
- margin: 0 auto;
- width: 100px;
- height: 50px;
- padding: 10px;
- font-size: 18px;
+section > img {
+  float: right;
+  margin: 0;
+  padding: 0;
 }
 
 ul {
   margin-top: 10px;
 }
+
 ul.favourite li {
     background: url(/images/orange-star-bullet-animated.gif) no-repeat;
     list-style: none;
-    padding: 0px 16px 0px 25px;
+    padding: 6px 16px 0px 25px;
     background-position: left center;
     background-size: 16px;
-    margin-left:10px;
+    margin-left:-25px;
 }
 
 p {
-  margin-left: 10px;
-  margin-top: 20px;
-  padding: 5px 0px;
+  /*TRBL*/
+  margin: 20px 0px 10px 10px;
+  /* padding: 5px 0px; */
+  line-height: 25px;
 }
 
 a {color: inherit;}
@@ -169,9 +152,7 @@ a:link{text-decoration: none;}
 a:hover{color: yellow;}
 
 footer {
-  /* bottom: 0; */
   width: 100%;
-  /* position:inherit; */
   margin-top: 100px;
   max-width: 960px;
   background-color: rgb(255, 204, 0);

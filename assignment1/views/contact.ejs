@@ -1,8 +1,15 @@
+<!--  COMP229-008
+      Assignment: 1
+      Author: Sing Cheung Tin
+      Date:   May 20, 2023
+      Filename: contact.ejs
+-->
 <!DOCTYPE html>
 <html>
 <head>
     <title>Contact Me</title>
     <link rel='stylesheet' href='/stylesheets/assignment1.css' />
+    <script src="/javascripts/assignment1.js" defer></script>
 </head>
 <body>
     <%- include('partials/header') %>
@@ -21,7 +28,7 @@
                 <input type="email" id="cEmail" name="clientEmail" size="40" required="required" maxlength="40">
                 <label for="cPhone" >&nbsp;&nbsp;&nbsp;Phone:</label>
                 <input name="phoneNumber" id="phone" type="tel" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"
-                   required placeholder="(nnn) nnn-nnnn" />
+                    placeholder="(nnn) nnn-nnnn" />
                 <!-- <input type="text" id="txtCPhone" name="txtCPhone" size="20" required="required" maxlength="11" placeholder="" tabindex="5"> -->
             </p>
             <p>
@@ -35,7 +42,7 @@
             </p>
             <p>
                 <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="10" cols="110" maxlength="1000" placeholder="---Please leave us your message---" ></textarea>
+                <textarea id="message" name="message" rows="10" cols="110" maxlength="1000" placeholder="---Please leave me your message---" ></textarea>
             </p>
         </fieldset>
         <p>
