@@ -1,6 +1,8 @@
-/*  COMP229-008
+/*    Course name: Web Application Development
+      Course code: COMP229-008
       Assignment: 1
-      Author: Sing Cheung Tin
+      Student ID: 301246562
+      Student Name: Sing Cheung Tin
       Date:   May 20, 2023
       Filename: index.js
 */
