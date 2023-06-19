@@ -1,0 +1,42 @@
+<!--  Course name: Web Application Development
+      Course code:COMP229-008
+      Assignment: 1
+      Student ID: 301246562
+      Student Name: Sing Cheung Tin
+      Date:   May 20, 2023
+      Filename: services.ejs
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Update Contact</title>
+  <link rel='stylesheet' href='/stylesheets/assignment1.css' />
+</head>
+<body>
+  <%- include('partials/header') %>
+  <h1>Update Contact</h1>
+  <form action="/contacts/update/<%= contact._id %>" method="POST">
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" value="<%= contact.username %>" required>
+    </div>
+    <div>
+      <label for="phone">Phone:</label>
+      <input type="text" id="phone" name="phone" value="<%= contact.phone %>" required>
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" value="<%= contact.email %>" required>
+    </div>
+    <div>
+      <input type="submit" value="Update">
+      <a href="/biz-contacts">Cancel</a>
+    </div>
+  </form>
+  <form action="/contacts/delete/<%= contact._id %>" method="POST" onsubmit="return confirm('Are you sure you want to delete this contact?')">
+    <input type="submit" value="Delete">
+  </form>
+</body>
+<%- include('partials/footer') %>
+</html>

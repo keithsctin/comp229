@@ -1,0 +1,39 @@
+<!--  Course name: Web Application Development
+      Course code:COMP229-008
+      Assignment: 1
+      Student ID: 301246562
+      Student Name: Sing Cheung Tin
+      Date:   May 20, 2023
+      Filename: assignment1.css
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/assignment1.css"/>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <section>
+        <img src="/images/myphoto.png" alt="My Photo" height="143" width="120" style="float: left; margin-right: 25px;">
+        <p>Hello there,</p>
+        <p>My name is Sing Cheung Tin. I'm studying Software Engineering Technician program in Centennial College.
+            The second and third semesters are tough semesters. There are many assignments and new technologies to learn.
+            However, I still think the program is very interesting and practical. The main courses include JavaScript, 
+            Node JS, C Sharp, SQL, and Software Engineering.
+        </p>
+    </section>
+    <section style="margin-left: 135px;">
+        <p>Here are my favourite things:</p>
+        <ul class="favourite">
+            <li>Reading</li>
+            <li>Hiking</li>
+            <li>Swimming</li>
+            <li>Playing badminton</li>
+            <li>Playing table tennis</li>
+            <li>Writing program</li>
+        </ul>
+    </section>
+</body>
+<%- include('partials/footer') %>
+</html>

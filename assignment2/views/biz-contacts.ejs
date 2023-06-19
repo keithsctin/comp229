@@ -1,0 +1,35 @@
+<!-- biz-contacts.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Business Contacts</title>
+
+  <link rel='stylesheet' href='/stylesheets/assignment1.css' />
+</head>
+<body>
+  <%- include('partials/header') %>
+  <h1>Business Contacts</h1>
+  <table>
+    <tr>
+      <th>Contact Name</th>
+      <th>Contact Number</th>
+      <th>Email Address</th>
+      <th>Actions</th>
+    </tr>
+    <% contacts.forEach(function(contact) { %>    <!--create a new array 'contacts'-->
+      <tr>
+        <td><%= contact.username %></td>    <!--assign a new object 'contact'-->
+        <td><%= contact.phone %></td>
+        <td><%= contact.email %></td>
+        <td>
+          <a href="/contacts/update/<%= contact._id %>">Update</a>
+          <form action="/contacts/delete/<%= contact._id %>" method="POST" onsubmit="return confirm('Are you sure you want to delete this contact?')">
+            <button type="submit">Delete</button>
+          </form>
+        </td>
+      </tr>
+    <% }); %>
+  </table>
+</body>
+<%- include('partials/footer') %>
+</html>

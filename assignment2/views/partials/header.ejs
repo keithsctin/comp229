@@ -1,0 +1,26 @@
+<!--  Course name: Web Application Development
+      Course code:COMP229-008
+      Assignment: 1
+      Student ID: 301246562
+      Student Name: Sing Cheung Tin
+      Date:   May 20, 2023
+      Filename: header.ejs
+-->
+<header>
+  <div>
+    <img src="/images/logo.png" alt="Setas logo" height="110" width="960">
+  </div>
+  <nav>
+      <ul>
+          <li><a href="/" >Home</a></li>
+          <li><a href="/about" >About Me</a></li>
+          <li><a href="/projects" >Projects</a></li>
+          <li><a href="/services" >Services</a></li>
+          <% if (typeof authenticated !== 'undefined' && authenticated) { %>
+            <li><a href="/biz-contacts">Business Contacts</a></li>
+          <% } %>
+          <li><a href="/contact" >Contact Me</a></li>
+          <li><a href="/login" >Login Page</a></li>
+      </ul>
+  </nav>
+</header>
