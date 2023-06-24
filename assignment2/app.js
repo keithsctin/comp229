@@ -1,6 +1,6 @@
 //  Course name: Web Application Development
 //  Course code:COMP229-008
-//  Assignment: 1
+//  Assignment: 2
 //  Student ID: 301246562
 //  Student Name: Sing Cheung Tin
 //  Date:   May 20, 2023
@@ -41,7 +41,7 @@ app.use(express.urlencoded({ extended: true }));
 
 //sesion
 app.use(session({
-  secret: 'your-secret-key',
+  secret: 'sessionsecretkey',
   resave: false,
   saveUninitialized: true
 }));
