@@ -14,13 +14,17 @@
   </head>
   <body>
     <%- include('partials/header') %>
-    <form action="/login" method="POST">
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" required><br><br>
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required><br><br>
-      <button class="button" type="submit">Login</button>
-    </form>
+    <section>
+      <div class="content">
+        <form action="/login" method="POST">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required><br><br>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required><br><br>
+          <button class="button" type="submit">Login</button>
+        </form>
+      </div>
+    </section>
   </body>
   <%- include('partials/footer') %>
 </html>

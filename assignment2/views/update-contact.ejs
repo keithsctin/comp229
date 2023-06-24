@@ -15,30 +15,31 @@
 </head>
 <body>
   <%- include('partials/header') %>
-  <!-- <h1>Business Contact Update</h1> -->
-  <div>
-    <form  class="form-button" action="/contacts/update/<%= contact._id %>" method="POST">
-        <p>
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="username" value="<%= contact.username %>" required>
-        </p>
-        <p>
-          <label for="phone">Phone:</label>
-          <input type="text" id="phone" name="phone" value="<%= contact.phone %>" required>
-        </p>
-        <p>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" value="<%= contact.email %>" required>
-        </p>
-        <input class="buttons" type="submit" value="Update">
-    </form>
-    <form class="form-button" action="/contacts/delete/<%= contact._id %>" method="POST" onsubmit="return confirm('Please click OK to confirm to delete this contact.')">
-      <input class="buttons" type="submit" value="Delete">
-    </form>
-    <form class="form-button" action="/biz-contacts">
-      <input class="buttons" type="submit" value="Cancel">
-    </form>
-  </div>
+  <section>
+    <div class="content">
+      <form  class="form-button" action="/contacts/update/<%= contact._id %>" method="POST">
+          <p>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" value="<%= contact.username %>" required>
+          </p>
+          <p>
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" value="<%= contact.phone %>" required>
+          </p>
+          <p>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="<%= contact.email %>" required>
+          </p>
+          <input class="buttons" type="submit" value="Update">
+      </form>
+      <form class="form-button" action="/contacts/delete/<%= contact._id %>" method="POST" onsubmit="return confirm('Please click OK to confirm to delete this contact.')">
+        <input class="buttons" type="submit" value="Delete">
+      </form>
+      <form class="form-button" action="/biz-contacts">
+        <input class="buttons" type="submit" value="Cancel">
+      </form>
+    </div>
+  </section>
 </body>
 <%- include('partials/footer') %>
 </html>

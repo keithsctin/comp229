@@ -15,43 +15,45 @@
 </head>
 <body>
     <%- include('partials/header') %>
-    <p>Please use the form below if you have any inquiry. The symbol * indicates required information.</p>
-    <form action="mailto:stin@my.centennialcollege.ca?subject=Inquiry" method="post">
-        <fieldset>
-            <legend>Contact Us</legend>
+    <section class="content">
+        <p>Please use the form below if you have any inquiry. The symbol * indicates required information.</p>
+        <form action="mailto:stin@my.centennialcollege.ca?subject=Inquiry" method="post">
+            <fieldset>
+                <legend>Contact Us</legend>
+                <p>
+                    <label for="fName">*First Name:</label>
+                    <input type="text" id="fName" name="firstName" size="45" required="required" maxlength="45">
+                    <label for="lName">&nbsp;&nbsp;&nbsp;*Last Name:</label>
+                    <input type="text" id="lName" name="lastName" size="45" required="required" maxlength="45">
+                </p>
+                <p>
+                    <label for="cEmail" >*Email:</label>
+                    <input type="email" id="cEmail" name="clientEmail" size="40" required="required" maxlength="40">
+                    <label for="cPhone" >&nbsp;&nbsp;&nbsp;Phone:</label>
+                    <input name="phoneNumber" id="phone" type="tel" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"
+                        placeholder="(nnn) nnn-nnnn" />
+                    <!-- <input type="text" id="txtCPhone" name="txtCPhone" size="20" required="required" maxlength="11" placeholder="" tabindex="5"> -->
+                </p>
+                <p>
+                    <label for="lstServices">*Services:</label>
+                    <select id="lstServices" name="lstServices[]" size="0" tabindex="6">
+                        <option value="Default">--Select--</option>
+                        <option value="Web">Web Development and Support</option>
+                        <option value="Ifstt">Infrastruture Setup and Support</option>
+                        <option value="Both">Both</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="10" cols="110" maxlength="1000" placeholder="---Please leave me your message---" ></textarea>
+                </p>
+            </fieldset>
             <p>
-                <label for="fName">*First Name:</label>
-                <input type="text" id="fName" name="firstName" size="45" required="required" maxlength="45">
-                <label for="lName">&nbsp;&nbsp;&nbsp;*Last Name:</label>
-                <input type="text" id="lName" name="lastName" size="45" required="required" maxlength="45">
+                <input type="submit" id=button name="btnSubmit" value="Submit" tabindex="17">
+                <input type="reset" id="button" name="btnReset" value="Reset" tabindex="19">
             </p>
-            <p>
-                <label for="cEmail" >*Email:</label>
-                <input type="email" id="cEmail" name="clientEmail" size="40" required="required" maxlength="40">
-                <label for="cPhone" >&nbsp;&nbsp;&nbsp;Phone:</label>
-                <input name="phoneNumber" id="phone" type="tel" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"
-                    placeholder="(nnn) nnn-nnnn" />
-                <!-- <input type="text" id="txtCPhone" name="txtCPhone" size="20" required="required" maxlength="11" placeholder="" tabindex="5"> -->
-            </p>
-            <p>
-                <label for="lstServices">*Services:</label>
-                <select id="lstServices" name="lstServices[]" size="0" tabindex="6">
-                    <option value="Default">--Select--</option>
-                    <option value="Web">Web Development and Support</option>
-                    <option value="Ifstt">Infrastruture Setup and Support</option>
-                    <option value="Both">Both</option>
-                </select>
-            </p>
-            <p>
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="10" cols="110" maxlength="1000" placeholder="---Please leave me your message---" ></textarea>
-            </p>
-        </fieldset>
-        <p>
-            <input type="submit" id=button name="btnSubmit" value="Submit" tabindex="17">
-            <input type="reset" id="button" name="btnReset" value="Reset" tabindex="19">
-        </p>
-    </form>
+        </form>
+    </section>
 </body>
 <%- include('partials/footer') %>
 </html>

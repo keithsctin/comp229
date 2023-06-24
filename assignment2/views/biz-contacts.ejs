@@ -15,30 +15,31 @@
 </head>
 <body>
   <%- include('partials/header') %>
-  <!-- <h1>Business Contacts</h1> -->
-  <table class="biz-table">
-    <tr>
-      <th>Contact Name</th>
-      <th>Contact Number</th>
-      <th>Email Address</th>
-      <th>Actions</th>
-    </tr>
-    <% contacts.forEach(function(contact) { %>    <!--create a new array 'contacts'-->
+  <section class="content">
+    <table>
       <tr>
-        <td><%= contact.username %></td>    <!--assign a new object 'contact'-->
-        <td><%= contact.phone %></td>
-        <td><%= contact.email %></td>
-        <td>
-          <form class="form-button" action="/contacts/update/<%= contact._id %>">
-            <input class="button" type="submit" value="Update">
-          </form>
-          <form class="form-button" action="/contacts/delete/<%= contact._id %>" method="POST" onsubmit="return confirm('Please click OK to confirm to delete this contact.')">
-            <input class="button" type="submit" value="Delete">
-          </form>
-        </td>
+        <th>Contact Name</th>
+        <th>Contact Number</th>
+        <th>Email Address</th>
+        <th>Action</th>
       </tr>
-    <% }); %>
-  </table>
+      <% contacts.forEach(function(contact) { %>    <!--create a new array 'contacts'-->
+        <tr>
+          <td><%= contact.username %></td>    <!--assign a new object 'contact'-->
+          <td><%= contact.phone %></td>
+          <td><%= contact.email %></td>
+          <td>
+            <form class="form-button" action="/contacts/update/<%= contact._id %>">
+              <input class="button" type="submit" value="Update">
+            </form>
+            <form class="form-button" action="/contacts/delete/<%= contact._id %>" method="POST" onsubmit="return confirm('Please click OK to confirm to delete this contact.')">
+              <input class="button" type="submit" value="Delete">
+            </form>
+          </td>
+        </tr>
+      <% }); %>
+    </table>
+  </section>
 </body>
 <br>
 <%- include('partials/footer') %>
