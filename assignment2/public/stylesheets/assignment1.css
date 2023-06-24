@@ -123,7 +123,7 @@ section {
 }
 
 section > h1 {
-  text-align: center;
+  text-align: left;
   font-size: 1.3em;
   font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
   letter-spacing: 0.1em;
