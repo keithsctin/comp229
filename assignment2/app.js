@@ -15,8 +15,8 @@ app.use(express.static(__dirname + '/public'));
 
 const port = 3002;
 
+//DB connection
 const dbUrl = 'mongodb://127.0.0.1:27017/myweb';
-
 mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log('Connected to MongoDB');
@@ -31,7 +31,7 @@ mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
 var indexRouter = require('./routes/index');
 app.use('/', indexRouter);
 
-var loginRouter = require('./routes/login');
+var loginRouter = require('./routes/login');  //login route
 app.use('/login', loginRouter);
 
 app.set('view engine', 'ejs');
@@ -76,6 +76,14 @@ app.post('/login', (req, res) => {
     });
 });
 
+// Middleware function to check if user is authenticated
+const isAuthenticated = (req, res, next) => {
+  if (req.session && req.session.authenticated) {
+    next();  // User is authenticated
+  } else {
+    res.redirect('/login');    // User is not authenticated, redirect to login page
+  }
+};
 
 // Business Contacts routes
 app.get('/biz-contacts', (req, res, next) => {
@@ -96,8 +104,7 @@ app.get('/biz-contacts', (req, res, next) => {
 });
 
 // Update Contact View
-// app.get('/contacts/update/:id', isAuthenticated, (req, res) => {
-app.get('/contacts/update/:id', (req, res) => {
+app.get('/contacts/update/:id', isAuthenticated, (req, res) => {
 
   const contactId = req.params.id;
 
@@ -106,7 +113,7 @@ app.get('/contacts/update/:id', (req, res) => {
       if (contact) {
         res.render('update-contact', { contact });
       } else {
-        // Handle if the contact is not found
+        console.error('The contact is not found');
       }
     })
     .catch((err) => {
@@ -115,8 +122,7 @@ app.get('/contacts/update/:id', (req, res) => {
 });
 
 // Update Contact Action
-// app.post('/contacts/update/:id',  isAuthenticated, (req, res) => {
-app.post('/contacts/update/:id', (req, res) => {
+app.post('/contacts/update/:id',  isAuthenticated, (req, res) => {
   const contactId = req.params.id;
   const { username, phone, email } = req.body;
 
@@ -130,9 +136,8 @@ app.post('/contacts/update/:id', (req, res) => {
     });
 });
 
-// Delete Contact Action
-// app.post('/contacts/delete/:id', isAuthenticated, (req, res) => {
-app.post('/contacts/delete/:id', (req, res) => {
+// Delete contact action
+app.post('/contacts/delete/:id', isAuthenticated, (req, res) => {
   const contactId = req.params.id;
 
   // Delete the contact from the database based on the contactId

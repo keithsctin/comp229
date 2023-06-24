@@ -12,7 +12,7 @@ router.post('/login', (req, res) => {
   User.findOne({ username, password })
     .then((contact) => {          //new variable 'contact'
       if (contact) {
-        res.render('biz-contacts');     //biz-contacts.ejs
+        res.render('biz-contacts');     //if found, go to biz-contacts.ejs
       } else {
         res.redirect('/');
       }
