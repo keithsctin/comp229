@@ -151,6 +151,13 @@ section > img {
   padding: 0;
 }
 
+.form-login {
+  display: flex;
+  justify-content: center;
+  /* min-height: 30vh; */
+  margin-top: 50px;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -175,8 +182,13 @@ ul.favourite li {
     margin-left:10px;
 }
 
-input[type=text] {
+label {
+  font-size: 16px;
+}
+
+input {
   box-sizing: border-box;
+  font-size: 16px;
 }
 
 .form-button {
@@ -184,12 +196,17 @@ input[type=text] {
 }
 
 .button {
-  margin: 0px 0px 5px 0px;
+  margin:  10px 0px 5px 0px;
   font-size: 14px;
+  width: 60px;
+  height: 30px;
 }
 
 .buttons {
   margin: 10px 0px 10px 10px;
+  font-size: 14px;
+  width: 60px;
+  height: 30px;
 }
 
 th {

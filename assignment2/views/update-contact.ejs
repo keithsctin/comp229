@@ -32,7 +32,8 @@
           </p>
           <input class="buttons" type="submit" value="Update">
       </form>
-      <form class="form-button" action="/contacts/delete/<%= contact._id %>" method="POST" onsubmit="return confirm('Please click OK to confirm to delete this contact.')">
+      <form class="form-button" action="/contacts/delete/<%= contact._id %>" method="POST"
+         onsubmit="return confirm('Please click OK to confirm to delete this contact.')">
         <input class="buttons" type="submit" value="Delete">
       </form>
       <form class="form-button" action="/biz-contacts">
