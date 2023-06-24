@@ -10,6 +10,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const session = require('express-session'); // Add the session middleware
+
 app.use(express.static(__dirname + '/public'));
 
 const port = 3000;
@@ -83,7 +84,7 @@ app.get('/biz-contacts', (req, res, next) => {
       .sort({ username: 1 })
       .exec()
       .then((contacts) => {
-        res.render('biz-contacts', { contacts, authenticated: true });
+        res.render('biz-contacts', { contacts, authenticated: true });  //if auth is success, then route to biz-contacts
       })
       .catch((err) => {
         console.error('Error retrieving contacts:', err);
@@ -126,7 +127,6 @@ app.post('/contacts/update/:id', (req, res) => {
     })
     .catch((err) => {
       console.error('Error updating contact:', err);
-      // Handle the error appropriately
     });
 });
 
@@ -143,7 +143,6 @@ app.post('/contacts/delete/:id', (req, res) => {
     })
     .catch((err) => {
       console.error('Error deleting contact:', err);
-      // Handle the error appropriately
     });
 });
 

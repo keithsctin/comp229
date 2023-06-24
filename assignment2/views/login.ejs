@@ -1,3 +1,11 @@
+<!--  Course name: Web Application Development
+      Course code:COMP229-008
+      Assignment: 1
+      Student ID: 301246562
+      Student Name: Sing Cheung Tin
+      Date:   May 20, 2023
+      Filename: login.ejs
+-->
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,13 +14,12 @@
   </head>
   <body>
     <%- include('partials/header') %>
-    <h1>Login</h1>
     <form action="/login" method="POST">
       <label for="username">Username:</label>
       <input type="text" id="username" name="username" required><br><br>
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" required><br><br>
-      <button type="submit">Login</button>
+      <button class="button" type="submit">Login</button>
     </form>
   </body>
   <%- include('partials/footer') %>

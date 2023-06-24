@@ -138,6 +138,11 @@ table {
   width: 100%;
   border-collapse: collapse;
 }
+
+.biz-table {
+  margin-bottom: 260px;
+}
+
 th, td {
   padding: 8px;
   text-align: left;
@@ -155,6 +160,36 @@ ul.favourite li {
     background-position: left center;
     background-size: 16px;
     margin-left:-25px;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+input[type=text] {
+  box-sizing: border-box;
+}
+
+.form-button {
+  display: inline;
+}
+
+.button {
+  margin: 0px 0px 5px 0px;
+  font-size: 14px;
+}
+
+.buttons {
+  /* display: inline-block;
+  flex-direction: row; */
+  /* gap: 10px; */
+  /* font-size: 14x; */
+  margin: 10px 0px 10px 10px;
+  /* margin: 0 10px; */
+}
+
+th {
+  background-color: aqua;
 }
 
 p {

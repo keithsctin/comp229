@@ -1,4 +1,11 @@
-<!-- biz-contacts.ejs -->
+<!--  Course name: Web Application Development
+      Course code:COMP229-008
+      Assignment: 1
+      Student ID: 301246562
+      Student Name: Sing Cheung Tin
+      Date:   May 20, 2023
+      Filename: biz-contacts.ejs
+-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,8 +15,8 @@
 </head>
 <body>
   <%- include('partials/header') %>
-  <h1>Business Contacts</h1>
-  <table>
+  <!-- <h1>Business Contacts</h1> -->
+  <table class="biz-table">
     <tr>
       <th>Contact Name</th>
       <th>Contact Number</th>
@@ -22,14 +29,17 @@
         <td><%= contact.phone %></td>
         <td><%= contact.email %></td>
         <td>
-          <a href="/contacts/update/<%= contact._id %>">Update</a>
-          <form action="/contacts/delete/<%= contact._id %>" method="POST" onsubmit="return confirm('Are you sure you want to delete this contact?')">
-            <button type="submit">Delete</button>
+          <form class="form-button" action="/contacts/update/<%= contact._id %>">
+            <input class="button" type="submit" value="Update">
+          </form>
+          <form class="form-button" action="/contacts/delete/<%= contact._id %>" method="POST" onsubmit="return confirm('Please click OK to confirm to delete this contact.')">
+            <input class="button" type="submit" value="Delete">
           </form>
         </td>
       </tr>
     <% }); %>
   </table>
 </body>
+<br>
 <%- include('partials/footer') %>
 </html>
