@@ -83,7 +83,6 @@ nav li {
 }
 
 nav li a {
-  /* display: block; */
   text-decoration: none;
   color: white;
   padding: 10px;
@@ -154,7 +153,6 @@ section > img {
 .form-login {
   display: flex;
   justify-content: center;
-  /* min-height: 30vh; */
   margin-top: 50px;
 }
 
