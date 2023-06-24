@@ -217,6 +217,10 @@ p {
   line-height: 25px;
 }
 
+.capitalize {
+  text-transform: capitalize;
+}
+
 a:link{text-decoration: none;}
 
 footer {
