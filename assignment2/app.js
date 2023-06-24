@@ -13,7 +13,7 @@ const session = require('express-session'); // Add the session middleware
 
 app.use(express.static(__dirname + '/public'));
 
-const port = 3000;
+const port = 3002;
 
 const dbUrl = 'mongodb://127.0.0.1:27017/myweb';
 
