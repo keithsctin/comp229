@@ -4,7 +4,7 @@
 //  Student ID: 301246562
 //  Student Name: Sing Cheung Tin
 //  Date:   May 20, 2023
-//  Filename: header.ejs
+//  Filename: app.js
 
 const express = require('express');
 const app = express();
