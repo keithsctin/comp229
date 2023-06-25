@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
 });
 
 router.post('/login', (req, res) => {
-  const { username, password, email, phone } = req.body;
+  const { username, password } = req.body;
 
   User.findOne({ username, password })
     .then((contact) => {          //new variable 'contact'

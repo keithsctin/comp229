@@ -3,7 +3,7 @@
       Assignment: 1
       Student ID: 301246562
       Student Name: Sing Cheung Tin
-      Date:   May 20, 2023
+      Date:   Jun 24, 2023
       Filename: update-contacts.ejs
 -->
 <!DOCTYPE html>
@@ -29,6 +29,14 @@
           <p>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" value="<%= contact.email %>" required>
+          </p>
+          <p>
+            <label for="age">Age:</label>
+            <input type="age" id="age" name="age" value="<%= contact.age %>" required>
+          </p>
+          <p>
+            <label for="education">Education:</label>
+            <input type="education" id="education" name="education" value="<%= contact.education %>" required>
           </p>
           <input class="buttons" type="submit" value="Update">
       </form>

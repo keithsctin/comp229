@@ -88,7 +88,7 @@ const isAuthenticated = (req, res, next) => {
 // Business Contacts routes
 app.get('/biz-contacts', (req, res, next) => {
   if (req.session && req.session.authenticated) {
-    User.find({}, 'username phone email')
+    User.find({}, 'username phone email age education')
       .sort({ username: 1 })
       .exec()
       .then((contacts) => {
@@ -124,10 +124,10 @@ app.get('/contacts/update/:id', isAuthenticated, (req, res) => {
 // Update Contact Action
 app.post('/contacts/update/:id',  isAuthenticated, (req, res) => {
   const contactId = req.params.id;
-  const { username, phone, email } = req.body;
+  const { username, phone, email, age, education } = req.body;
 
   // Update the contact in the database based on the contactId
-  User.findByIdAndUpdate(contactId, { username, phone, email })
+  User.findByIdAndUpdate(contactId, { username, phone, email, age, education })
     .then(() => {
       res.redirect('/biz-contacts');
     })
