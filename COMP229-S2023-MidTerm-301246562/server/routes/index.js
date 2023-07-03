@@ -13,9 +13,6 @@ let mongoose = require('mongoose');
 // define the game model
 let book = require('../models/books');
 
-// debug
-// console.log("routes_index");
-
 /* GET home page. wildcard */
 router.get('/', (req, res, next) => {
   res.render('content/index', {
